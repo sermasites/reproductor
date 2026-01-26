@@ -10,7 +10,15 @@
 </head>
 <body>
    
-<audio controls src="audio/Reik - Creo en Ti.mp3"></audio>
+<audio id="music" controls autoplay muted src="audio/"></audio>
     
 </body>
+<script>
+document.addEventListener("click", () => {
+  const audio = document.getElementById("music");
+  audio.muted = false;
+  audio.volume = 0.6;
+  audio.play();
+}, { once: true });
+</script>
 </html>
